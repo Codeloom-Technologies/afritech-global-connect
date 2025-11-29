@@ -29,19 +29,80 @@ const Quote = () => {
     details: "",
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
+  // const handleSubmit = (e: React.FormEvent) => {
+  //   e.preventDefault();
     
-    // Basic validation
-    if (!formData.name || !formData.email || !formData.serviceType) {
-      toast.error("Please fill in all required fields");
-      return;
-    }
+  //   // Basic validation
+  //   if (!formData.name || !formData.email || !formData.serviceType) {
+  //     toast.error("Please fill in all required fields");
+  //     return;
+  //   }
 
-    // Here you would typically send the data to a backend
-    toast.success("Quote request submitted! Our team will contact you within 24 hours.");
+  //   // Here you would typically send the data to a backend
+  //   toast.success("Quote request submitted! Our team will contact you within 24 hours.");
     
-    // Reset form
+  //   // Reset form
+  //   setFormData({
+  //     name: "",
+  //     organization: "",
+  //     email: "",
+  //     phone: "",
+  //     serviceType: "",
+  //     languages: "",
+  //     duration: "",
+  //     location: "",
+  //     attendees: "",
+  //     details: "",
+  //   });
+  //   setDate(undefined);
+  // };
+
+  const handleSubmit = (e: React.FormEvent) => {
+  e.preventDefault();
+  
+  // Basic validation
+  if (!formData.name || !formData.email || !formData.serviceType) {
+    toast.error("Please fill in all required fields");
+    return;
+  }
+
+  // Create email content for quote request
+  const subject = `Quote Request for ${formData.serviceType} - ${formData.organization || formData.name}`;
+  const body = `
+QUOTE REQUEST DETAILS:
+
+Contact Information:
+- Name: ${formData.name}
+- Organization: ${formData.organization || 'Not provided'}
+- Email: ${formData.email}
+- Phone: ${formData.phone || 'Not provided'}
+
+Service Details:
+- Service Type: ${formData.serviceType}
+- Languages Required: ${formData.languages || 'Not specified'}
+- Event Date: ${date ? date.toLocaleDateString() : 'Not specified'}
+- Duration: ${formData.duration || 'Not specified'}
+- Location: ${formData.location || 'Not specified'}
+- Expected Attendees: ${formData.attendees || 'Not specified'}
+
+Additional Details:
+${formData.details || 'No additional details provided.'}
+
+---
+This quote request was submitted through the Afritech Symposia website.
+  `.trim();
+
+  // Encode the subject and body for the mailto link
+  const mailtoLink = `mailto:timothyjeff@yahoo.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+  // Open the email client
+  window.location.href = mailtoLink;
+
+  // Show success message
+  toast.success("Opening your email client... Please send the email to submit your quote request.");
+  
+  // Optional: Reset form after a delay
+  setTimeout(() => {
     setFormData({
       name: "",
       organization: "",
@@ -55,7 +116,8 @@ const Quote = () => {
       details: "",
     });
     setDate(undefined);
-  };
+  }, 3000);
+};
 
   const features = [
     "Free, no-obligation quote",

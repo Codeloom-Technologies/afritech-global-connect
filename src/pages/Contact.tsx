@@ -18,19 +18,63 @@ const Contact = () => {
     message: "",
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
+  // const handleSubmit = (e: React.FormEvent) => {
+  //   e.preventDefault();
     
-    // Basic validation
-    if (!formData.name || !formData.email || !formData.message) {
-      toast.error("Please fill in all required fields");
-      return;
-    }
+  //   // Basic validation
+  //   if (!formData.name || !formData.email || !formData.message) {
+  //     toast.error("Please fill in all required fields");
+  //     return;
+  //   }
 
-    // Here you would typically send the data to a backend
-    toast.success("Message sent successfully! We'll get back to you soon.");
+  //   // Here you would typically send the data to a backend
+  //   toast.success("Message sent successfully! We'll get back to you soon.");
     
-    // Reset form
+  //   // Reset form
+  //   setFormData({
+  //     name: "",
+  //     email: "",
+  //     phone: "",
+  //     subject: "",
+  //     message: "",
+  //   });
+  // };
+
+  const handleSubmit = (e: React.FormEvent) => {
+  e.preventDefault();
+  
+  // Basic validation
+  if (!formData.name || !formData.email || !formData.message) {
+    toast.error("Please fill in all required fields");
+    return;
+  }
+
+  // Create email content
+  const subject = formData.subject || `Contact Form Submission from ${formData.name}`;
+      const body = `
+    Name: ${formData.name}
+    Email: ${formData.email}
+    Phone: ${formData.phone || 'Not provided'}
+    Subject: ${formData.subject || 'Not specified'}
+
+    Message:
+    ${formData.message}
+
+    ---
+    This message was sent from the Afritech Symposia contact form.
+      `.trim();
+
+  // Encode the subject and body for the mailto link
+  const mailtoLink = `mailto:timothyjeff@yahoo.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+  // Open the email client
+  window.location.href = mailtoLink;
+
+  // Show success message
+  toast.success("Opening your email client... Please send the email to complete your message.");
+  
+  // Optional: Reset form after a delay
+  setTimeout(() => {
     setFormData({
       name: "",
       email: "",
@@ -38,7 +82,8 @@ const Contact = () => {
       subject: "",
       message: "",
     });
-  };
+  }, 2000);
+};
 
   const handleWhatsApp = () => {
     const message = encodeURIComponent("Hello! I'd like to inquire about your language services.");
