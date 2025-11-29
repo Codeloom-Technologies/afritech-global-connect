@@ -84,7 +84,7 @@ const Footer = () => {
               </li>
               <li className="flex items-start gap-2 text-sm text-primary-foreground/80">
                 <MapPin className="w-4 h-4 mt-0.5 flex-shrink-0" />
-                <span>Kaduna, Kenya</span>
+                <span>Kaduna, Nigeria</span>
               </li>
             </ul>
           </div>
@@ -92,7 +92,7 @@ const Footer = () => {
 
         <div className="border-t border-primary-foreground/20 mt-8 pt-8 text-center">
           <p className="text-sm text-primary-foreground/60">
-            © {new Date().getFullYear()} Afritech Symposia. All rights reserved.
+            © {new Date().getFullYear()} Afritech Symposia. All rights reserved. <br />
           </p>
         </div>
       </div>
