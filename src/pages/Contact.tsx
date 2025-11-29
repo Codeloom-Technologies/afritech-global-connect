@@ -186,13 +186,13 @@ const Contact = () => {
                         href="mailto:info@afritechsymposia.com"
                         className="text-xs sm:text-sm text-muted-foreground hover:text-accent transition-colors block mb-1"
                       >
-                        info@afritechsymposia.com
+                        timothyjeff@yahoo.com
                       </a>
                       <a
                         href="mailto:quotes@afritechsymposia.com"
                         className="text-xs sm:text-sm text-muted-foreground hover:text-accent transition-colors block"
                       >
-                        quotes@afritechsymposia.com
+                        realtimothawus77@gmail.com
                       </a>
                     </div>
                   </div>
@@ -239,7 +239,7 @@ const Contact = () => {
                       <p className="text-xs sm:text-sm text-muted-foreground">
                         Afritech Symposia Headquarters
                         <br />
-                        Westlands Business District
+                        20,Jawal Street, Ben Thompson Estate, Maigero.
                         <br />
                         Kaduna, Nigeria
                       </p>
