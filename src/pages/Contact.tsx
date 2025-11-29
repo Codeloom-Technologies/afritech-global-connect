@@ -239,7 +239,7 @@ const Contact = () => {
                       <p className="text-xs sm:text-sm text-muted-foreground">
                         Afritech Symposia Headquarters
                         <br />
-                        20,Jawal Street, Ben Thompson Estate, Maigero.
+                        20, Jawal Street, Ben Thompson Estate, Maigero.
                         <br />
                         Kaduna, Nigeria
                       </p>

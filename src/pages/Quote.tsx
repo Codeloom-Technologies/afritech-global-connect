@@ -285,16 +285,16 @@ const Quote = () => {
                   </p>
                   <div className="space-y-2">
                     <a
-                      href="tel:+254123456789"
+                      href="tel:+2348034526617"
                       className="block text-accent hover:underline font-medium"
                     >
-                      +254 123 456 789
+                       +234 803 452 6617
                     </a>
                     <a
                       href="mailto:urgent@afritechsymposia.com"
                       className="block text-accent hover:underline font-medium"
                     >
-                      urgent@afritechsymposia.com
+                      timothyjeff@yahoo.com
                     </a>
                   </div>
                 </CardContent>
