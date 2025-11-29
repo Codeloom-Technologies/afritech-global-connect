@@ -80,11 +80,13 @@ const Industries = () => {
       <Navbar />
 
       {/* Hero Section */}
-      <section className="pt-32 pb-20 bg-gradient-subtle">
-        <div className="container mx-auto px-4">
+      <section className="pt-24 sm:pt-28 md:pt-32 pb-16 sm:pb-20 bg-gradient-subtle">
+        <div className="container mx-auto px-4 sm:px-6">
           <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-5xl md:text-6xl font-bold text-foreground mb-6">Industries We Serve</h1>
-            <p className="text-xl text-muted-foreground leading-relaxed">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-4 sm:mb-6">
+              Industries We Serve
+            </h1>
+            <p className="text-lg sm:text-xl text-muted-foreground leading-relaxed px-4 sm:px-0">
               Specialized language solutions tailored to the unique demands of diverse sectors
             </p>
           </div>
@@ -92,22 +94,24 @@ const Industries = () => {
       </section>
 
       {/* Industries Grid */}
-      <section className="py-20 bg-background">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+      <section className="py-16 sm:py-20 bg-background">
+        <div className="container mx-auto px-4 sm:px-6">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 max-w-6xl mx-auto">
             {industries.map((industry, index) => (
               <Card
                 key={index}
-                className="border-border hover:shadow-elegant transition-all duration-300 hover:-translate-y-1"
+                className="border-border hover:shadow-elegant transition-all duration-300 hover:-translate-y-1 h-full"
               >
-                <CardContent className="p-8">
-                  <div className="w-16 h-16 rounded-lg bg-accent/10 flex items-center justify-center mb-6">
-                    <industry.icon className="w-9 h-9 text-accent" />
+                <CardContent className="p-6 sm:p-8">
+                  <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-lg bg-accent/10 flex items-center justify-center mb-4 sm:mb-6">
+                    <industry.icon className="w-7 h-7 sm:w-9 sm:h-9 text-accent" />
                   </div>
-                  <h3 className="text-2xl font-bold text-foreground mb-4">{industry.title}</h3>
-                  <p className="text-muted-foreground mb-4 leading-relaxed">{industry.description}</p>
-                  <div className="pt-4 border-t border-border">
-                    <p className="text-sm text-muted-foreground">
+                  <h3 className="text-xl sm:text-2xl font-bold text-foreground mb-3 sm:mb-4">{industry.title}</h3>
+                  <p className="text-sm sm:text-base text-muted-foreground mb-3 sm:mb-4 leading-relaxed">
+                    {industry.description}
+                  </p>
+                  <div className="pt-3 sm:pt-4 border-t border-border">
+                    <p className="text-xs sm:text-sm text-muted-foreground">
                       <span className="font-semibold text-foreground">Examples:</span> {industry.examples}
                     </p>
                   </div>
@@ -119,26 +123,28 @@ const Industries = () => {
       </section>
 
       {/* Case Studies Preview */}
-      <section className="py-20 bg-secondary/30">
-        <div className="container mx-auto px-4">
+      <section className="py-16 sm:py-20 bg-secondary/30">
+        <div className="container mx-auto px-4 sm:px-6">
           <div className="max-w-4xl mx-auto">
-            <div className="text-center mb-12">
-              <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">Success Stories</h2>
-              <p className="text-lg text-muted-foreground">
+            <div className="text-center mb-8 sm:mb-12">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4">
+                Success Stories
+              </h2>
+              <p className="text-base sm:text-lg text-muted-foreground px-4 sm:px-0">
                 Real results from our partnerships across industries
               </p>
             </div>
 
-            <div className="space-y-6">
+            <div className="space-y-4 sm:space-y-6">
               <Card className="border-border shadow-soft">
-                <CardContent className="p-8">
-                  <div className="flex items-start gap-4 mb-4">
-                    <Landmark className="w-8 h-8 text-accent flex-shrink-0" />
+                <CardContent className="p-6 sm:p-8">
+                  <div className="flex items-start gap-3 sm:gap-4 mb-3 sm:mb-4">
+                    <Landmark className="w-6 h-6 sm:w-8 sm:h-8 text-accent flex-shrink-0 mt-1" />
                     <div>
-                      <h3 className="text-xl font-bold text-foreground mb-2">
+                      <h3 className="text-lg sm:text-xl font-bold text-foreground mb-2">
                         African Union Summit 2023
                       </h3>
-                      <p className="text-muted-foreground">
+                      <p className="text-sm sm:text-base text-muted-foreground">
                         Provided simultaneous interpreting in 6 languages for over 2,000 delegates across 3 days,
                         ensuring seamless communication for critical continental policy discussions.
                       </p>
@@ -148,14 +154,14 @@ const Industries = () => {
               </Card>
 
               <Card className="border-border shadow-soft">
-                <CardContent className="p-8">
-                  <div className="flex items-start gap-4 mb-4">
-                    <Cpu className="w-8 h-8 text-accent flex-shrink-0" />
+                <CardContent className="p-6 sm:p-8">
+                  <div className="flex items-start gap-3 sm:gap-4 mb-3 sm:mb-4">
+                    <Cpu className="w-6 h-6 sm:w-8 sm:h-8 text-accent flex-shrink-0 mt-1" />
                     <div>
-                      <h3 className="text-xl font-bold text-foreground mb-2">
+                      <h3 className="text-lg sm:text-xl font-bold text-foreground mb-2">
                         Pan-African Tech Conference
                       </h3>
-                      <p className="text-muted-foreground">
+                      <p className="text-sm sm:text-base text-muted-foreground">
                         Delivered RSI services for 5,000+ virtual attendees across 15 African countries, enabling
                         real-time multilingual access to keynotes, panels, and workshops.
                       </p>
@@ -165,12 +171,12 @@ const Industries = () => {
               </Card>
 
               <Card className="border-border shadow-soft">
-                <CardContent className="p-8">
-                  <div className="flex items-start gap-4 mb-4">
-                    <Heart className="w-8 h-8 text-accent flex-shrink-0" />
+                <CardContent className="p-6 sm:p-8">
+                  <div className="flex items-start gap-3 sm:gap-4 mb-3 sm:mb-4">
+                    <Heart className="w-6 h-6 sm:w-8 sm:h-8 text-accent flex-shrink-0 mt-1" />
                     <div>
-                      <h3 className="text-xl font-bold text-foreground mb-2">WHO Healthcare Initiative</h3>
-                      <p className="text-muted-foreground">
+                      <h3 className="text-lg sm:text-xl font-bold text-foreground mb-2">WHO Healthcare Initiative</h3>
+                      <p className="text-sm sm:text-base text-muted-foreground">
                         Translated over 500 pages of medical documentation and provided on-site interpreting for a
                         major healthcare capacity-building program across 8 African nations.
                       </p>
@@ -184,29 +190,29 @@ const Industries = () => {
       </section>
 
       {/* Expertise Section */}
-      <section className="py-20 bg-background">
-        <div className="container mx-auto px-4">
+      <section className="py-16 sm:py-20 bg-background">
+        <div className="container mx-auto px-4 sm:px-6">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4 sm:mb-6">
               Industry-Specific Expertise
             </h2>
-            <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
+            <p className="text-base sm:text-lg text-muted-foreground mb-6 sm:mb-8 leading-relaxed px-4 sm:px-0">
               Our interpreters and translators undergo specialized training and continuous professional development
               to master the terminology, protocols, and nuances specific to each sector we serve. This ensures not
               just linguistic accuracy, but also contextual relevance and cultural sensitivity.
             </p>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12">
-              <div className="p-6 bg-secondary/30 rounded-lg">
-                <div className="text-4xl font-bold text-accent mb-2">500+</div>
-                <div className="text-sm text-muted-foreground">Certified Linguists</div>
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 mt-8 sm:mt-12">
+              <div className="p-4 sm:p-6 bg-secondary/30 rounded-lg">
+                <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-accent mb-1 sm:mb-2">500+</div>
+                <div className="text-xs sm:text-sm text-muted-foreground">Certified Linguists</div>
               </div>
-              <div className="p-6 bg-secondary/30 rounded-lg">
-                <div className="text-4xl font-bold text-accent mb-2">80+</div>
-                <div className="text-sm text-muted-foreground">Language Pairs</div>
+              <div className="p-4 sm:p-6 bg-secondary/30 rounded-lg">
+                <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-accent mb-1 sm:mb-2">80+</div>
+                <div className="text-xs sm:text-sm text-muted-foreground">Language Pairs</div>
               </div>
-              <div className="p-6 bg-secondary/30 rounded-lg">
-                <div className="text-4xl font-bold text-accent mb-2">15+</div>
-                <div className="text-sm text-muted-foreground">Years of Excellence</div>
+              <div className="p-4 sm:p-6 bg-secondary/30 rounded-lg">
+                <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-accent mb-1 sm:mb-2">15+</div>
+                <div className="text-xs sm:text-sm text-muted-foreground">Years of Excellence</div>
               </div>
             </div>
           </div>
@@ -214,24 +220,24 @@ const Industries = () => {
       </section>
 
       {/* CTA */}
-      <section className="py-20 bg-gradient-primary">
-        <div className="container mx-auto px-4">
+      <section className="py-16 sm:py-20 bg-gradient-primary">
+        <div className="container mx-auto px-4 sm:px-6">
           <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-4xl md:text-5xl font-bold text-primary-foreground mb-6">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-primary-foreground mb-4 sm:mb-6">
               Your Industry, Our Expertise
             </h2>
-            <p className="text-xl text-primary-foreground/90 mb-8">
+            <p className="text-lg sm:text-xl text-primary-foreground/90 mb-6 sm:mb-8 px-4 sm:px-0">
               Let's discuss how our specialized language services can support your sector-specific needs.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link to="/quote">
-                <Button variant="hero" size="lg" className="text-lg px-8 py-6 h-auto">
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
+              <Link to="/quote" className="flex-1 sm:flex-none">
+                <Button variant="hero" size="lg" className="text-lg w-full sm:w-auto px-6 sm:px-8 py-4 sm:py-6 h-auto">
                   Request a Quote
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </Button>
               </Link>
-              <Link to="/contact">
-                <Button variant="outline" size="lg" className="text-lg px-8 py-6 h-auto border-primary-foreground text-primary hover:bg-primary-foreground hover:text-primary">
+              <Link to="/contact" className="flex-1 sm:flex-none">
+                <Button variant="outline" size="lg" className="text-lg w-full sm:w-auto px-6 sm:px-8 py-4 sm:py-6 h-auto border-primary-foreground text-primary hover:bg-primary-foreground hover:text-primary">
                   Contact Us
                 </Button>
               </Link>
