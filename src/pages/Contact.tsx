@@ -42,7 +42,7 @@ const Contact = () => {
 
   const handleWhatsApp = () => {
     const message = encodeURIComponent("Hello! I'd like to inquire about your language services.");
-    window.open(`https://wa.me/254123456789?text=${message}`, "_blank");
+    window.open(`https://wa.me/2348034526617?text=${message}`, "_blank");
   };
 
   return (
@@ -197,14 +197,14 @@ const Contact = () => {
                         href="tel:+254123456789"
                         className="text-muted-foreground hover:text-accent transition-colors"
                       >
-                        +254 123 456 789
+                        +234 803 452 6617
                       </a>
                       <br />
                       <a
                         href="tel:+254987654321"
                         className="text-muted-foreground hover:text-accent transition-colors"
                       >
-                        +254 987 654 321
+                        +234 803 452 6617
                       </a>
                     </div>
                   </div>
@@ -224,7 +224,7 @@ const Contact = () => {
                         <br />
                         Westlands Business District
                         <br />
-                        Nairobi, Kenya
+                        Kaduna, Nigeria
                       </p>
                     </div>
                   </div>
@@ -240,9 +240,9 @@ const Contact = () => {
                     <div>
                       <h3 className="text-lg font-semibold text-foreground mb-2">Business Hours</h3>
                       <p className="text-muted-foreground">
-                        Monday - Friday: 8:00 AM - 6:00 PM (EAT)
+                        Monday - Friday: 8:00 AM - 6:00 PM (WAT)
                         <br />
-                        Saturday: 9:00 AM - 2:00 PM (EAT)
+                        Saturday: 9:00 AM - 2:00 PM (WAT)
                         <br />
                         24/7 Emergency Support Available
                       </p>

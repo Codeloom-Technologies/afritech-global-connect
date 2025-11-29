@@ -111,7 +111,7 @@ const Index = () => {
                 </Button>
               </Link>
               <Link to="/services">
-                <Button variant="outline" size="lg" className="text-lg px-8 py-6 h-auto border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary">
+                <Button variant="outline" size="lg" className="text-lg px-8 py-6 h-auto border-primary-foreground text-primary hover:bg-primary-foreground hover:text-primary">
                   Explore Services
                 </Button>
               </Link>
@@ -240,7 +240,7 @@ const Index = () => {
                 </Button>
               </Link>
               <Link to="/contact">
-                <Button variant="outline" size="lg" className="text-lg px-8 py-6 h-auto border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary">
+                <Button variant="outline" size="lg" className="text-lg px-8 py-6 h-auto border-primary-foreground text-primary hover:bg-primary-foreground hover:text-primary">
                   Book an Interpreter
                 </Button>
               </Link>

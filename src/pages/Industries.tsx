@@ -231,7 +231,7 @@ const Industries = () => {
                 </Button>
               </Link>
               <Link to="/contact">
-                <Button variant="outline" size="lg" className="text-lg px-8 py-6 h-auto border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary">
+                <Button variant="outline" size="lg" className="text-lg px-8 py-6 h-auto border-primary-foreground text-primary hover:bg-primary-foreground hover:text-primary">
                   Contact Us
                 </Button>
               </Link>

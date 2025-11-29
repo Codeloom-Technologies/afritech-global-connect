@@ -78,13 +78,13 @@ const Footer = () => {
               </li>
               <li className="flex items-start gap-2 text-sm text-primary-foreground/80">
                 <Phone className="w-4 h-4 mt-0.5 flex-shrink-0" />
-                <a href="tel:+254123456789" className="hover:text-accent transition-colors">
-                  +254 123 456 789
+                <a href="tel:+2348034526617" className="hover:text-accent transition-colors">
+                  +234 803 452 6617
                 </a>
               </li>
               <li className="flex items-start gap-2 text-sm text-primary-foreground/80">
                 <MapPin className="w-4 h-4 mt-0.5 flex-shrink-0" />
-                <span>Nairobi, Kenya</span>
+                <span>Kaduna, Kenya</span>
               </li>
             </ul>
           </div>
